@@ -35,13 +35,31 @@
     </div>
   </div>
 </nav>
+
+<div class="container mt-4">
+  <h4>Vue 공부를 통한 블로그 만들기</h4>
+  <p>--Vue로 만듬--</p>
+</div>
+
+ <!-- vue 파일이름 두단어 이상으로 만들어야 오류 안남!@!@!@ -->
+<ListList v-for="(a,i) in 블로그글" :key="i" :블로그글="a"/>
+
 </template>
+
 
 <script>
 
+import ListList from "./components/ListList.vue"
+import blog from "./assets/blog.js"
 export default {
   name: 'App',
+  data(){
+    return{
+      블로그글 : blog
+    }
+  },
   components: {
+    ListList: ListList
   }
 }
 </script>
