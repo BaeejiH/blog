@@ -1,17 +1,17 @@
 <template>
+  
+<!--$router.params url에 파라미터를 다 가져옴 -->
    <div class="detail-view container mt-4">
-    <h2>{{ title }}</h2>
-    <p>{{ content }}</p>
+    <h4>상세페이지</h4>
+    <h2>{{ 블로그글[$route.params.id].title }}</h2>
+    <p>{{ 블로그글[$route.params.id].content }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      title: '상세 페이지',
-      content: '이곳은 블로그 포스트의 상세 내용을 보여주는 페이지입니다.'
-    }
+  props : {
+    블로그글 : Array,
   }
 }
 </script>

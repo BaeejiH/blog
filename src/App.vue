@@ -38,7 +38,9 @@
 
 <router-link to="/list"> 리스트페이지</router-link>
 
-<router-view :블로그글="블로그글"></router-view>
+<div class="mt-4">
+  <router-view :블로그글="블로그글"></router-view>
+</div>
 <!-- props전송은 위에처럼 router-view를통해 전송 -->
  <!-- vue 파일이름 두단어 이상으로 만들어야 오류 안남!@!@!@ -->
 <!-- <ListList v-for="(a,i) in 블로그글" :key="i" :블로그글="a"/> -->

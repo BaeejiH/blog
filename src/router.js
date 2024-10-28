@@ -12,7 +12,11 @@ const routes = [
     component: HomeHome,
   },
   {
-    path: "/details", // 
+    path: "/rewgWGGGWGWG", // 404페이지  , 같은 route가 겹치면 위에 있는 것부터실행됨
+    component: HomeHome,
+  },
+  {
+    path: "/details/:id", // url parameter문법
     component: DetailsPage,
   },
 
