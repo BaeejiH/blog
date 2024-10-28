@@ -1,7 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router"; // 경로가 아니라 라이브러리 이름을 적으면 해당 라이브러리를 가져옴.
-import ListList from "./components/ListList.vue"
-import HomeHome from "./components/HomeHome.vue"
-import DetailsPage from "./components/DetailsPage.vue"
+import ListList from './components/ListList.vue'
+import HomeHome from './components/HomeHome.vue'
+import DetailsPage from './components/DetailsPage.vue'
+import AuthorBlog from './components/AuthorBlog.vue'
+import CommentBlog from './components/CommentBlog.vue'
 const routes = [
   {
     path: "/list", // 페이지 나눌 때 이것만 건드리면 됨.
@@ -18,6 +20,16 @@ const routes = [
   {
     path: "/details/:id", // url parameter문법
     component: DetailsPage,
+    children:[
+      {
+        path:"author", // router 안에 또 다른 router 만들 수 있음.
+        component:AuthorBlog,
+      },
+      {
+        path:"comment",
+        component:CommentBlog,
+      }
+    ]
   },
 
 ];

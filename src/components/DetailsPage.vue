@@ -5,6 +5,8 @@
     <h4>상세페이지</h4>
     <h2>{{ 블로그글[$route.params.id].title }}</h2>
     <p>{{ 블로그글[$route.params.id].content }}</p>
+    <router-view></router-view> 
+    <!-- 자식 라우터를 랜더링 할수있도록 위의 <router-view></router-view> 추가해줘야함 -->
   </div>
 </template>
 
